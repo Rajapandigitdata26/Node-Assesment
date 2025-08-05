@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/style.css">
+<div class="navbar">
+  <div class="brand">Node Assessment</div>
+  <div class="nav-links">
+    <a href="/change-password">Change Password</a>
+    <a href="/logout">Logout</a>
+  </div>
+</div>
+<div class="layout">
+  <div class="sidebar">
+  <a href="/posts">All Posts</a>
+  <a href="/posts/my" class="active">My Posts</a>
+  <a href="/posts/create">Create Post</a>
+  </div>
+  <div class="main-content" style="display:flex;justify-content:center;align-items:flex-start;min-height:70vh;">
+    <div style="width:100%;max-width:600px;">
+      <ul>
+        <% posts.forEach(function(post) { %>
+          <li class="post-item">
+            <div class="post-content"><%= post.content %></div>
+            <div class="post-privacy"><%= post.isPublic ? 'Public' : 'Private' %></div>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</div>

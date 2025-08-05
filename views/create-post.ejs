@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/style.css">
+<div class="navbar">
+  <div class="brand">Node Assessment</div>
+  <div class="nav-links">
+    <a href="/change-password">Change Password</a>
+    <a href="/logout">Logout</a>
+  </div>
+</div>
+<div class="layout">
+  <div class="sidebar">
+  <a href="/posts">All Posts</a>
+  <a href="/posts/my">My Posts</a>
+  <a href="/posts/create" class="active">Create Post</a>
+  </div>
+  <div class="main-content" style="display:flex;justify-content:center;align-items:center;min-height:70vh;width:100%;">
+    <div style="width:100%;display:flex;justify-content:center;align-items:center;">
+      <form method="post" action="/posts/create" class="create-post-form">
+        <textarea name="content" placeholder="Write your post here" required></textarea>
+        <label><input type="checkbox" name="isPublic" checked /> Public</label>
+        <button type="submit">Post</button>
+      </form>
+    </div>
+  </div>
+</div>
